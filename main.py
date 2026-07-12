@@ -294,15 +294,15 @@ def get_wind_direction(code: Any) -> str:
     return ARAH_ANGIN.get(normalized, normalized)
 
 def main(page: ft.Page) -> None:
-    page.title = "Weather App BMKG - Flet"
+    page.title = "Cuaca - Flet"
     page.theme_mode = ft.ThemeMode.DARK
     page.bgcolor = "#08111F"
     page.padding = 0
     page.scroll = ft.ScrollMode.AUTO
 
-    title = ft.Text("Weather App BMKG", size=30, weight=ft.FontWeight.BOLD)
+    title = ft.Text("Cuaca", size=30, weight=ft.FontWeight.BOLD)
     subtitle = ft.Text(
-        "Prakiraan cuaca kelurahan/desa di Indonesia",
+        "Prakiraan cuaca kota/kelurahan/desa di Indonesia",
         size=14,
         color="#B9C7DC",
     )
@@ -613,10 +613,8 @@ def main(page: ft.Page) -> None:
                     controls=[
                         ft.Icon(ft.Icons.INFO_OUTLINE, size=17, color="#93C5FD"),
                         ft.Text(
-                            "Nama yang tersedia: Banjarmasin, Kertak Baru Ilir, "
-                            "Mantuil, Kelayan Timur, Pemurus Luar, Belitung Utara, "
-                            "Belitung Selatan, Pelambuan, Telaga Biru, dan Kemayoran. "
-                            "Wilayah lain dapat dicari memakai kode ADM4.",
+                            "Silahkan Ketik Nama Kota Anda, Jika Tidak Tersedia, Silahkan Masukkan Kode AMD4 Kota Anda"
+                            ,
                             size=11,
                             color="#94A3B8",
                             expand=True,
